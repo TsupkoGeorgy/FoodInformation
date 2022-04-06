@@ -25,15 +25,13 @@ import java.io.IOException
 
 class OverviewViewModel(app: Application) : AndroidViewModel(app) {
 
-    private val _foodList = MutableLiveData<List<Food>>()
+    private val _foodList = MutableLiveData<List<Food>>(parseJson(app.applicationContext, "food_new.json"))
     val foodList: LiveData<List<Food>>
         get() = _foodList
 
 
-    init
-    {
-        _foodList.value = parseJson(app.applicationContext, "food_new.json")
-    }
+
+
 
 
 }

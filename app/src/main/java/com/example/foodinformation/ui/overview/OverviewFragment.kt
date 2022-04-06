@@ -11,17 +11,17 @@ import com.example.foodinformation.databinding.OverviewFragmentBinding
 
 class OverviewFragment : Fragment() {
 
-
-    private val viewModel: OverviewViewModel by lazy {
-        ViewModelProvider(this).get(OverviewViewModel::class.java)
-    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
+        val application = requireNotNull(activity).application
         val binding = OverviewFragmentBinding.inflate(inflater)
         binding.lifecycleOwner = this
-        binding.viewModel = viewModel
+        val viewModelFactory = OverviewViewModelFactory(application)
+        binding.viewModel = ViewModelProvider(
+            this, viewModelFactory).get(OverviewViewModel::class.java)
+        binding.listFood.adapter = FoodListAdapter()
 
         return binding.root
     }
