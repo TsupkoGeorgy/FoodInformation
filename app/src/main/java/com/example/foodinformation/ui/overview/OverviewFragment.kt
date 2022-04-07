@@ -6,10 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import com.example.foodinformation.R
 import com.example.foodinformation.databinding.OverviewFragmentBinding
 
 class OverviewFragment : Fragment() {
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,10 +23,20 @@ class OverviewFragment : Fragment() {
         val binding = OverviewFragmentBinding.inflate(inflater)
         binding.lifecycleOwner = this
         val viewModelFactory = OverviewViewModelFactory(application)
-        binding.viewModel = ViewModelProvider(
+        val viewModel= ViewModelProvider(
             this, viewModelFactory).get(OverviewViewModel::class.java)
-        binding.listFood.adapter = FoodListAdapter()
 
+        binding.viewModel = viewModel
+        binding.listFood.adapter = FoodListAdapter(FoodListAdapter.OnClickListener {
+            viewModel.displayFoodDetails(it)
+        })
+
+        viewModel.navigateToSelectedFoodDetails.observe(viewLifecycleOwner, Observer {
+            if (it != null) {
+                findNavController().navigate(OverviewFragmentDirections.actionOverviewFragmentToDetailsFragment(it))
+                viewModel.displayFoodDetailsComplete()
+            }
+        })
         return binding.root
     }
 

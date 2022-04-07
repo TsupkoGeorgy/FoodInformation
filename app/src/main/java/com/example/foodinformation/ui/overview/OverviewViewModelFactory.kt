@@ -16,6 +16,4 @@ class OverviewViewModelFactory(
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }
-
-
 }
