@@ -7,26 +7,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.foodinformation.R
+import com.example.foodinformation.databinding.DetailsFragmentBinding
 
 class DetailsFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = DetailsFragment()
-    }
-
-    private lateinit var viewModel: DetailsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        return inflater.inflate(R.layout.details_fragment, container, false)
+        val binding = DetailsFragmentBinding.inflate(inflater)
+        binding.lifecycleOwner = this
+        val selectedFood = DetailsFragmentArgs.fromBundle(requireArguments()).selectedFood
+        val viewModelFactory = DetailsViewModelFactory(selectedFood)
+        val viewModel = ViewModelProvider(
+            this, viewModelFactory).get(DetailsViewModel::class.java)
+        binding.viewModel = viewModel
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(DetailsViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }
