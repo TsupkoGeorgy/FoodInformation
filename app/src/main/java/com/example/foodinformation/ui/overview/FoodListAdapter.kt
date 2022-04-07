@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.foodinformation.data.model.Food
 import com.example.foodinformation.databinding.ListViewItemBinding
 
-class FoodListAdapter() :
+class FoodListAdapter(val onClickListener: OnClickListener) :
     ListAdapter<Food, FoodListAdapter.FoodViewHolder>(DiffCallback)
 {
     companion object DiffCallback : DiffUtil.ItemCallback<Food>()
@@ -31,8 +31,6 @@ class FoodListAdapter() :
         fun bind(food: Food)
         {
             binding.food = food
-            // This is important, because it forces the data binding to execute immediately,
-            // which allows the RecyclerView to make the correct view size measurements
             binding.executePendingBindings()
         }
     }
@@ -50,9 +48,9 @@ class FoodListAdapter() :
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int)
     {
         val food = getItem(position)
-//        holder.itemView.setOnClickListener {
-//            onClickListener.onClick(food)
-//        }
+        holder.itemView.setOnClickListener {
+            onClickListener.onClick(food)
+        }
         holder.bind(food)
     }
 }
