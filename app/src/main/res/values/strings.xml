@@ -2,4 +2,9 @@
     <string name="app_name">Food Information</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_company">Мы работаем с 2007 года и занимаемся разработкой приложений для iOS, Android и Windows Phone. Центральный офис со всей командой находится в Ростове-на-Дону.
+Мы создаем приложения для клиентов из разных сфер деятельности - для бизнеса, образования, рекламы и развлечений.
+Мы основательно работаем над каждым проектом, проводим исследования для дизайна и изучаем новые технологии.
+Сотрудники компании - пытливые специалисты с минимальным стажем в каждой области - 5 лет. Решения, которые принимаются по ходу разработки, направлены на успех приложения и мы всегда обосновываем их клиенту.</string>
+    <string name="txtCredits"><a href="http://www.google.com">Google</a></string>
 </resources>
