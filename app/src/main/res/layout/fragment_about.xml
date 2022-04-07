@@ -10,9 +10,17 @@
             type="com.example.foodinformation.ui.about.AboutViewModel" />
     </data>
 
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        >
 
         <ImageView
             android:id="@+id/aboutImage"
@@ -23,29 +31,39 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/rulesText"
+            style="@style/TextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
+            android:justificationMode="inter_word"
             android:text="@string/about_company"
-            android:textSize="18sp"
+            app:autoSizeTextType="uniform"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/aboutImage" />
 
         <TextView
-            android:id="@+id/text2"
+            android:id="@+id/openSiteText"
+            style="@style/TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="jgreg"
+            android:layout_marginBottom="24dp"
+            android:text="@string/site_company"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rulesText" />
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+
 </layout>

@@ -1,10 +1,19 @@
 <resources>
     <string name="app_name">Food Information</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="about_company">Мы работаем с 2007 года и занимаемся разработкой приложений для iOS, Android и Windows Phone. Центральный офис со всей командой находится в Ростове-на-Дону.
 Мы создаем приложения для клиентов из разных сфер деятельности - для бизнеса, образования, рекламы и развлечений.
 Мы основательно работаем над каждым проектом, проводим исследования для дизайна и изучаем новые технологии.
 Сотрудники компании - пытливые специалисты с минимальным стажем в каждой области - 5 лет. Решения, которые принимаются по ходу разработки, направлены на успех приложения и мы всегда обосновываем их клиенту.</string>
-    <string name="txtCredits"><a href="http://www.google.com">Google</a></string>
+    <string name="product_list">Список продуктов</string>
+    <string name="site_company"><a href="https://www.ironwaterstudio.com/">О компании</a></string>
+    <string name="site_company_url">https://www.ironwaterstudio.com/</string>
+    <string name="yes">ОК</string>
+    <string name="no">Отмена</string>
+    <string name="open_site">Открыть сайт в браузере?</string>
+    <string name="id">Id</string>
+
+    <string name="overview_window">Главный экран</string>
+    <string name="detail_window">Детали</string>
+    <string name="about_window">О компании</string>
 </resources>

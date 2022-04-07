@@ -32,8 +32,7 @@ class AboutFragment : Fragment() {
         val binding = FragmentAboutBinding.inflate(inflater)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
-
-        binding.text2.setOnClickListener {
+        binding.openSiteText.setOnClickListener {
             showAlertDialog()
         }
 
@@ -44,25 +43,25 @@ class AboutFragment : Fragment() {
         val alertDialog: AlertDialog? = activity?.let {
             val builder = AlertDialog.Builder(it)
             builder.apply {
-                setPositiveButton("ОК",
+                setPositiveButton(R.string.yes,
                     DialogInterface.OnClickListener { dialog, id ->
                         openUrl()
                     })
-                setNegativeButton("Отмена",
+                setNegativeButton(R.string.no,
                     DialogInterface.OnClickListener { dialog, id ->
                         dialog.cancel()
                     })
             }
             builder.create()
         }
-        alertDialog?.setMessage("Открыть сайт в браузере?")
+        alertDialog?.setMessage(getString(R.string.open_site))
         alertDialog?.create()
         alertDialog?.show()
     }
 
 
     private fun openUrl() {
-        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"))
+        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.site_company_url)))
         startActivity(browserIntent)
     }
 }

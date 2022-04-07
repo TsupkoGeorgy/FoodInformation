@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/overviewFragment"
         android:name="com.example.foodinformation.ui.overview.OverviewFragment"
-        android:label="overview_fragment"
+        android:label="@string/overview_window"
         tools:layout="@layout/overview_fragment" >
         <action
             android:id="@+id/action_overviewFragment_to_detailsFragment"
@@ -17,7 +17,7 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.example.foodinformation.ui.details.DetailsFragment"
-        android:label="details_fragment"
+        android:label="@string/detail_window"
         tools:layout="@layout/details_fragment" >
         <argument android:name="selectedFood"
             app:argType="com.example.foodinformation.data.model.Food" />
@@ -25,6 +25,6 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.foodinformation.ui.about.AboutFragment"
-        android:label="fragment_about"
+        android:label="@string/about_window"
         tools:layout="@layout/fragment_about" />
 </navigation>

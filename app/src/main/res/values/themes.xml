@@ -13,4 +13,18 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <style name="TextViewPrimary">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">#DE000000</item>
+        <item name="android:fontFamily">@font/roboto</item>
+
+    </style>
+    <style name="TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#DE000000</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColorLink">#0036A5</item>
+    </style>
 </resources>
