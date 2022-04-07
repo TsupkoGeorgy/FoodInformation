@@ -19,11 +19,8 @@ import com.example.foodinformation.R
 
 class AboutFragment : Fragment() {
 
-    private val viewModel: AboutViewModel by lazy {
-        ViewModelProvider(this).get(AboutViewModel::class.java)
-    }
 
-    @SuppressLint("ClickableViewAccessibility")
+
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,7 +28,6 @@ class AboutFragment : Fragment() {
     ): View? {
         val binding = FragmentAboutBinding.inflate(inflater)
         binding.lifecycleOwner = this
-        binding.viewModel = viewModel
         binding.openSiteText.setOnClickListener {
             showAlertDialog()
         }

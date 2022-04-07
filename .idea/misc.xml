@@ -3,14 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Git/FoodInformation/app/src/main/res/drawable/background.xml" value="0.2635416666666667" />
-        <entry key="..\:/Git/FoodInformation/app/src/main/res/layout-v26/fragment_about.xml" value="0.24739583333333334" />
-        <entry key="..\:/Git/FoodInformation/app/src/main/res/layout/activity_main.xml" value="0.18489583333333334" />
-        <entry key="..\:/Git/FoodInformation/app/src/main/res/layout/details_fragment.xml" value="0.20520833333333333" />
-        <entry key="..\:/Git/FoodInformation/app/src/main/res/layout/fragment_about.xml" value="0.1" />
-        <entry key="..\:/Git/FoodInformation/app/src/main/res/layout/list_item.xml" value="0.1" />
-        <entry key="..\:/Git/FoodInformation/app/src/main/res/layout/list_view_item.xml" value="0.25" />
-        <entry key="..\:/Git/FoodInformation/app/src/main/res/layout/overview_fragment.xml" value="0.2015625" />
         <entry key="..\:/dev/Testovoe_Intelectika/MVVM/FoodInformation/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/dev/Testovoe_Intelectika/MVVM/FoodInformation/app/src/main/res/layout/details_fragment.xml" value="0.34782608695652173" />
         <entry key="..\:/dev/Testovoe_Intelectika/MVVM/FoodInformation/app/src/main/res/layout/overview_fragment.xml" value="0.20520833333333333" />

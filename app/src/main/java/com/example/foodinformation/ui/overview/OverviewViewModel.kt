@@ -12,7 +12,7 @@ import com.example.foodinformation.ui.parseJson
 class OverviewViewModel(app: Application) : AndroidViewModel(app) {
 
     private val _foodList =
-        MutableLiveData<List<Food>>(parseJson(app.applicationContext, "food_new.json"))
+        MutableLiveData<List<Food>>(parseJson(app.applicationContext, JSON))
     val foodList: LiveData<List<Food>>
         get() = _foodList
 
@@ -28,6 +28,9 @@ class OverviewViewModel(app: Application) : AndroidViewModel(app) {
         _navigateToSelectedFoodDetails.value = null
     }
 
+    companion object {
+        private const val JSON: String = "food_new.json"
+    }
 
 
 }

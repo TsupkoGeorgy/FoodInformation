@@ -3,25 +3,25 @@
     "id": 1,
     "name": "бургер 1",
     "imgUrl": "burger1",
-    "description": "какой вкусный десерт 1"
+    "description": "какой вкусный бургер"
   },
   {
     "id": 2,
     "name": "бургер 2",
     "imgUrl": "burger2",
-    "description": "какой вкусный десерт 2"
+    "description": "какой вкусный бургер"
   },
   {
     "id": 3,
     "name": "десерт 3",
     "imgUrl": "dessert1",
-    "description": "какой вкусный десерт 3"
+    "description": "какой вкусный десерт"
   },
   {
     "id": 4,
     "name": "десерт 4",
     "imgUrl": "dessert2",
-    "description": "какой вкусный десерт 4"
+    "description": "какой вкусный десерт"
   },
 
   {
@@ -40,12 +40,12 @@
     "id": 7,
     "name": "десерт 1",
     "imgUrl": "dessert1",
-    "description": "какой вкусный десерт "
+    "description": "какой вкусный десерт"
   },
   {
     "id": 8,
     "name": "десерт 2",
     "imgUrl": "dessert2",
-    "description": "какой вкусный десерт "
+    "description": "какой вкусный десерт"
   }
 ]
